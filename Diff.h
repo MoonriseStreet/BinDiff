@@ -1,16 +1,15 @@
-//
-// Created by irina on 4/14/21.
-//
+
 
 #ifndef BINDIFF_DIFF_H
 #define BINDIFF_DIFF_H
 
+struct Diff {
 
-
-class Diff {
+  long int offset = 0;
+  long int size = 0;
+  char data[];
 
 };
 
 
-
-#endif //BINDIFF_DIFF_H
+#endif // BINDIFF_DIFF_H

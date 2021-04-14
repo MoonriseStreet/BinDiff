@@ -5,6 +5,20 @@
 #ifndef BINDIFF_DIFFILE_H
 #define BINDIFF_DIFFILE_H
 
-class DifFile {};
+#include <Diff.h>
+#include <stdio.h>
+
+class DifFile {
+public:
+  DifFile();
+
+  ~DifFile();
+
+  void add_diff(const Diff &diff);
+private:
+  void write_header();
+
+  std::FILE *stream = NULL;
+};
 
 #endif // BINDIFF_DIFFILE_H
