@@ -7,7 +7,7 @@ struct Diff {
 
   long int offset = 0;
   long int size = 0;
-  char data[];
+  std::vector<char> data{};
 
 };
 
