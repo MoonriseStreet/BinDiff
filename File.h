@@ -15,7 +15,7 @@ public:
 
   const std::string operator-(const File &another);
 
-  const std::string apply_dif(const DifFile &difference);
+  const File apply_dif(const std::string &difference);
 
 private:
   std::FILE *stream = NULL;

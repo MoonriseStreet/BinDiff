@@ -2,8 +2,9 @@
 #include "DifFile.h"
 
 
-DifFile::DifFile(std::string filename) {
-  stream = std::fopen(filename, 'w');
+DifFile::DifFile(std::string filename, bool new = True) {
+  std::string flag = new ? 'wb' : 'rb';
+  stream = std::fopen(filename, flag);
   write_header();
 }
 
